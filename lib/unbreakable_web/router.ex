@@ -16,6 +16,10 @@ defmodule UnbreakableWeb.Router do
   scope "/", UnbreakableWeb do
     pipe_through :browser
 
+    resources "/statuses", StatusController
+    resources "/goals", GoalController
+    resources "/streaks", StreakController
+
     get "/", PageController, :index
   end
 
